@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300&family=Poppins:ital,wght@0,300;0,500&display=swap');
+
+$kol1: #0ff;
+
+body {
+  background: url(../img/bg01.jpg) center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  color: white;
+  font-family: Barlow Condensed;
+}
+
+main {
+  background-image: linear-gradient(to bottom, rgba(10, 15, 23, 0.82), rgba(22, 32, 54, 0.205));
+  min-height: 90vh;
+  width: 94%;
+  margin: 40px auto;
+  padding: 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    tr {
+      position: relative;
+    }
+
+    tr::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: $kol1;
+      position: absolute;
+      left: 0;
+      bottom: 15px;
+      box-shadow: 0 0 15px 2px $kol1;
+      animation: pulsowanie 1s infinite alternate;
+
+      @keyframes pulsowanie {
+        to {
+          box-shadow: 0 0 15px 0 $kol1;
+        }
+      }
+    }
+
+    th {
+      font: 300 14px Poppins;
+      color: $kol1;
+      padding-bottom: 30px;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px dotted rgba($kol1, 0.3);
+      clip-path: inset(0 100% 0 0);
+
+      &:last-child {
+        border: none;
+      }
+
+      &.showMe {
+        animation: animacja 1s forwards;
+      }
+    }
+
+    td {
+      padding: 1vh 1vw;
+      text-align: center;
+      font-family: Barlow Condensed;
+      color: white;
+      font-size: 1rem;
+
+      &.id {
+        padding: 0;
+
+        span {
+          padding: 0.5em 1.4em;
+          border: 1px solid rgba($kol1, 0.2);
+          border-radius: 8px;
+          background: rgba($kol1, 0.02);
+          font-size: 0.8em;
+        }
+      }
+
+      &.name {
+
+        font-size: 2.4em;
+        font-family: Poppins;
+        font-weight: 500;
+      }
+
+      &.terrain {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .icon {
+        height: 36px;
+
+        &.grass {
+          background-image: url(../img/grass.png);
+          width: 36px;
+        }
+
+        &.grasshill {
+          background-image: url(../img/grassy-hill.png);
+          width: 39px;
+        }
+
+        &.mountain {
+          background-image: url(../img/mountains.png);
+          width: 52px;
+        }
+
+        &.cave {
+          background-image: url(../img/caves.png);
+          width: 43px;
+        }
+
+        &.jungle {
+          background-image: url(../img/jungle.png);
+          width: 25px;
+        }
+
+        &.forest {
+          background-image: url(../img/forest.png);
+          width: 36px;
+        }
+
+        &.swamp {
+          background-image: url(../img/swamp.png);
+          width: 32px;
+        }
+
+        &.gas_giant {
+          background-image: url(../img/gas-planet.png);
+          width: 36px;
+        }
+
+        &.lake {
+          background-image: url(../img/lakes.png);
+          width: 40px;
+        }
+
+        &.ocean {
+          background-image: url(../img/ocean.png);
+          width: 39px;
+        }
+
+        &.cityscape {
+          background-image: url(../img/cityscape.png);
+          width: 36px;
+        }
+
+        &.desert {
+          background-image: url(../img/desert.png);
+          width: 47px;
+        }
+
+        &.canyon {
+          background-image: url(../img/canyon.png);
+          width: 36px;
+        }
+
+        &.savanna {
+          background-image: url(../img/savanna.png);
+          width: 56px;
+        }
+
+        &.volcano {
+          background-image: url(../img/volcano.png);
+          width: 36px;
+        }
+
+        &.river {
+          background-image: url(../img/river.png);
+          width: 26px;
+        }
+
+        &.asteroid {
+          background-image: url(../img/asteroid.png);
+          width: 36px;
+        }
+
+        &.glacier {
+          background-image: url(../img/glacier.png);
+          width: 36px;
+        }
+
+        &.island {
+          background-image: url(../img/island.png);
+          width: 36px;
+        }
+
+        &.rock {
+          background-image: url(../img/rockarch.png);
+          width: 36px;
+        }
+      }
+    }
+  }
+}
+
+nav {
+  text-align: center;
+
+  button {
+    border: 1px solid rgba($kol1, 0.2);
+    background: rgba($kol1, 0.1);
+    font-family: Poppins;
+    font-weight: 300;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    border-radius: 7px;
+    color: $kol1;
+
+    &:hover {
+      color: white;
+      background: rgba($kol1, 0.2);
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes animacja {
+  0% {
+    clip-path: inset(50%);
+    transform: scale(0.2);
+  }
+
+  100% {
+    clip-path: inset(0%);
+    transform: scale(1);
+  }
+
+}

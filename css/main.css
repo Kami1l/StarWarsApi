@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300&family=Poppins:ital,wght@0,300;0,500&display=swap");
+body {
+  background: url(../img/bg01.jpg) center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  color: white;
+  font-family: Barlow Condensed;
+}
+
+main {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(10, 15, 23, 0.82)), to(rgba(22, 32, 54, 0.205)));
+  background-image: linear-gradient(to bottom, rgba(10, 15, 23, 0.82), rgba(22, 32, 54, 0.205));
+  min-height: 90vh;
+  width: 94%;
+  margin: 40px auto;
+  padding: 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead tr {
+  position: relative;
+}
+
+table thead tr::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #0ff;
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  -webkit-box-shadow: 0 0 15px 2px #0ff;
+          box-shadow: 0 0 15px 2px #0ff;
+  -webkit-animation: pulsowanie 1s infinite alternate;
+          animation: pulsowanie 1s infinite alternate;
+}
+
+@-webkit-keyframes pulsowanie {
+  to {
+    -webkit-box-shadow: 0 0 15px 0 #0ff;
+            box-shadow: 0 0 15px 0 #0ff;
+  }
+}
+
+@keyframes pulsowanie {
+  to {
+    -webkit-box-shadow: 0 0 15px 0 #0ff;
+            box-shadow: 0 0 15px 0 #0ff;
+  }
+}
+
+table thead th {
+  font: 300 14px Poppins;
+  color: #0ff;
+  padding-bottom: 30px;
+}
+
+table tbody tr {
+  border-bottom: 1px dotted rgba(0, 255, 255, 0.3);
+  -webkit-clip-path: inset(0 100% 0 0);
+          clip-path: inset(0 100% 0 0);
+}
+
+table tbody tr:last-child {
+  border: none;
+}
+
+table tbody tr.showMe {
+  -webkit-animation: animacja 1s forwards;
+          animation: animacja 1s forwards;
+}
+
+table tbody td {
+  padding: 1vh 1vw;
+  text-align: center;
+  font-family: Barlow Condensed;
+  color: white;
+  font-size: 1rem;
+}
+
+table tbody td.id {
+  padding: 0;
+}
+
+table tbody td.id span {
+  padding: 0.5em 1.4em;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(0, 255, 255, 0.02);
+  font-size: 0.8em;
+}
+
+table tbody td.name {
+  font-size: 2.4em;
+  font-family: Poppins;
+  font-weight: 500;
+}
+
+table tbody td.terrain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+table tbody td .icon {
+  height: 36px;
+}
+
+table tbody td .icon.grass {
+  background-image: url(../img/grass.png);
+  width: 36px;
+}
+
+table tbody td .icon.grasshill {
+  background-image: url(../img/grassy-hill.png);
+  width: 39px;
+}
+
+table tbody td .icon.mountain {
+  background-image: url(../img/mountains.png);
+  width: 52px;
+}
+
+table tbody td .icon.cave {
+  background-image: url(../img/caves.png);
+  width: 43px;
+}
+
+table tbody td .icon.jungle {
+  background-image: url(../img/jungle.png);
+  width: 25px;
+}
+
+table tbody td .icon.forest {
+  background-image: url(../img/forest.png);
+  width: 36px;
+}
+
+table tbody td .icon.swamp {
+  background-image: url(../img/swamp.png);
+  width: 32px;
+}
+
+table tbody td .icon.gas_giant {
+  background-image: url(../img/gas-planet.png);
+  width: 36px;
+}
+
+table tbody td .icon.lake {
+  background-image: url(../img/lakes.png);
+  width: 40px;
+}
+
+table tbody td .icon.ocean {
+  background-image: url(../img/ocean.png);
+  width: 39px;
+}
+
+table tbody td .icon.cityscape {
+  background-image: url(../img/cityscape.png);
+  width: 36px;
+}
+
+table tbody td .icon.desert {
+  background-image: url(../img/desert.png);
+  width: 47px;
+}
+
+table tbody td .icon.canyon {
+  background-image: url(../img/canyon.png);
+  width: 36px;
+}
+
+table tbody td .icon.savanna {
+  background-image: url(../img/savanna.png);
+  width: 56px;
+}
+
+table tbody td .icon.volcano {
+  background-image: url(../img/volcano.png);
+  width: 36px;
+}
+
+table tbody td .icon.river {
+  background-image: url(../img/river.png);
+  width: 26px;
+}
+
+table tbody td .icon.asteroid {
+  background-image: url(../img/asteroid.png);
+  width: 36px;
+}
+
+table tbody td .icon.glacier {
+  background-image: url(../img/glacier.png);
+  width: 36px;
+}
+
+table tbody td .icon.island {
+  background-image: url(../img/island.png);
+  width: 36px;
+}
+
+table tbody td .icon.rock {
+  background-image: url(../img/rockarch.png);
+  width: 36px;
+}
+
+nav {
+  text-align: center;
+}
+
+nav button {
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  background: rgba(0, 255, 255, 0.1);
+  font-family: Poppins;
+  font-weight: 300;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  border-radius: 7px;
+  color: #0ff;
+}
+
+nav button:hover {
+  color: white;
+  background: rgba(0, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+@-webkit-keyframes animacja {
+  0% {
+    -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-clip-path: inset(0%);
+            clip-path: inset(0%);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes animacja {
+  0% {
+    -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-clip-path: inset(0%);
+            clip-path: inset(0%);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=main.css.map */
